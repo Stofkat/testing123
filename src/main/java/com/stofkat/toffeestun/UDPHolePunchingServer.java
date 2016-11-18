@@ -72,7 +72,7 @@ public class UDPHolePunchingServer {
         try {
 
             //shuffleArray(UIDTable);
-            serverSocket = new DatagramSocket(80);
+            serverSocket = new DatagramSocket(Integer.valueOf(System.getenv("PORT")));
             byte[] buf = new byte[1024];
             DatagramPacket dp = new DatagramPacket(buf, 1024);
 
